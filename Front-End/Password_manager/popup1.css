@@ -1,0 +1,185 @@
+/* General Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    width: 200px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #667eea, #764ba2); /* Gradient background */
+    margin: 0;
+}
+
+/* Main Container */
+.container {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    width: 80%;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    opacity: 0;
+    transform: scale(0.9);
+    animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+/* Fade-in effect for all elements */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Smooth transition effect when switching screens */
+.screen {
+    display: none;
+    opacity: 0;
+    transform: translateY(-10px);
+    animation: slideIn 0.4s ease-in-out forwards;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Headings */
+h2 {
+    font-size: 1.4em;
+    color: #333;
+}
+
+/* Paragraph */
+p {
+    font-size: 0.9em;
+    color: #555;
+}
+
+/* Input Fields */
+input {
+    width: 80%;
+    padding: 12px;
+    margin-top: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1em;
+    outline: none;
+    transition: 0.2s;
+}
+
+input:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 5px rgba(102, 126, 234, 0.5);
+}
+
+/* Buttons */
+button {
+    width: 60%;
+    padding: 12px;
+    margin-top: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1em;
+    font-weight: bold;
+    background: #007BFF;
+    color: white;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    background: #0056b3;
+    box-shadow: 2px 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Secondary Buttons */
+.secondary-btn {
+    background: #ddd;
+    color: black;
+}
+
+.secondary-btn:hover {
+    background: #bbb;
+}
+
+/* Password List */
+#password-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+#password-list li {
+    display: flex;
+    justify-content: space-between;
+    background: #f8f9fa;
+    padding: 10px;
+    border-radius: 8px;
+    margin: 5px 0;
+    box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#password-list button {
+    font-size: 0.9em;
+    padding: 5px;
+    width: auto;
+}
+
+/* Hides screens initially */
+#dashboard, #password-form {
+    display: none;
+}
+/* Style for the password display modal */
+#password-display {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 8px;
+    color: white;
+    text-align: center;
+}
+
+#password-display button {
+    margin: 5px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background: #007BFF;
+    color: white;
+}
+
+#password-display button:hover {
+    background: #0056b3;
+}
+
+/* Textarea Fields */
+textarea {
+    width: 80%;
+    padding: 12px;
+    margin-top: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1em;
+    outline: none;
+    transition: 0.2s;
+    resize: vertical; /* Allows vertical resizing but prevents horizontal */
+}
+
+/* Focus effect for Textarea */
+textarea:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 5px rgba(102, 126, 234, 0.5);
+}

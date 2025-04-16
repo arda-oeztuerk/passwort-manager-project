@@ -142,3 +142,44 @@ button:hover {
 #dashboard, #password-form {
     display: none;
 }
+/* Style for the password display modal */
+#password-display {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 8px;
+    color: white;
+    text-align: center;
+}
+
+#password-display button {
+    margin: 5px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background: #007BFF;
+    color: white;
+}
+
+#password-display button:hover {
+    background: #0056b3;
+}
+
+/* Textarea Fields */
+textarea {
+    width: 80%;
+    padding: 12px;
+    margin-top: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1em;
+    outline: none;
+    transition: 0.2s;
+    resize: vertical; /* Allows vertical resizing but prevents horizontal */
+}
+
+/* Focus effect for Textarea */
+textarea:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 5px rgba(102, 126, 234, 0.5);
+}

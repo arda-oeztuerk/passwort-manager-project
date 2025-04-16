@@ -1,0 +1,30 @@
+<!-- popup.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Save Password</title>
+    <style>
+        body {
+            width: 200px;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h3>Save this password?</h3>
+    <button id="saveButton">Save</button>
+    <button id="cancelButton">Cancel</button>
+
+    <script>
+        // Handle saving or canceling
+        document.getElementById('saveButton').addEventListener('click', function() {
+            // Save username/password to storage
+            chrome.storage.local.set({ username: "someUser", password: "somePassword" });
+        });
+
+        document.getElementById('cancelButton').addEventListener('click', function() {
+            window.close();
+        });
+    </script>
+</body>
+</html>

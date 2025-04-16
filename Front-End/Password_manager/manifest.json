@@ -1,0 +1,50 @@
+{
+    "manifest_version": 3,
+    "name": "AutoSave Password Manager",
+    "version": "1.0",
+    "description": "Automatically saves passwords when logging into websites.",
+    "permissions": [
+        "storage",
+        "activeTab",
+        "scripting",
+        "clipboardWrite",
+        "tabs"
+    ],
+    "host_permissions": [
+        "http://*/*",
+        "https://*/*"
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts": [
+        {
+            "matches": ["*://*/*"],
+            "js": ["content.js"],
+            "run_at": "document_end"
+        }
+    ],
+    "action": {
+        "default_popup": "password_Manager1.html",
+        "default_icon": {
+            "16": "icons/icon16.png",
+            "48": "icons/icon48.png",
+            "128": "icons/icon128.png"
+        }
+    },
+    "web_accessible_resources": [
+        {
+            
+            "resources": [
+                "password_Manager1.html",
+                "popup.css",
+                "popup1.js",
+                "encryption.js",
+                "public/font/ProximaNova-Reg-webfont.woff2"
+            ],
+            "matches": [
+                "<all_urls>"
+            ]
+        }
+    ]
+}
