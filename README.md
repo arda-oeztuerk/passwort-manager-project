@@ -24,3 +24,11 @@ A secure, browser-based password manager that allows users to save, encrypt, dec
 - Each password is encrypted with AES-GCM using a key derived from the master password
 - A unique IV is generated for every encryption and stored alongside the ciphertext
 - Decryption is only possible with the correct master password
+
+  
+![image](https://github.com/user-attachments/assets/d412ddf4-5ea7-4a98-a7a9-82b82232901b)                            ![image](https://github.com/user-attachments/assets/be9d0d70-803e-4a9e-8778-0132b70e178b) 
+
+![image](https://github.com/user-attachments/assets/b90f2ca6-3bee-4e0f-90ba-570f2447a017)                              ![image](https://github.com/user-attachments/assets/d348bdec-acf6-4ea0-96ba-e4d91c813103)
+
+
+                      
